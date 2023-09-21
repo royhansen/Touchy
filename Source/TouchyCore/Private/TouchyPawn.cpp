@@ -38,7 +38,7 @@ void ATouchyPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 void ATouchyPawn::OnUsePressed()
 {
 	// Check the InteractionTrace to find the actor in the center of our view (if any)
-	AActor* Actor = (InteractionTrace && InteractionTrace->Hit.bBlockingHit) ? InteractionTrace->Hit.Actor.Get() : nullptr;
+	AActor* Actor = (InteractionTrace && InteractionTrace->Hit.bBlockingHit) ? InteractionTrace->Hit.GetActor() : nullptr;
 
 	// Here we demonstrate multiple ways of implementing a simple interaction system;
 	// in an actual game project you'd usually just want to pick one.
